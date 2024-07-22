@@ -1,0 +1,46 @@
+----------- PARTE 1 ----------- 
+
+Título da página: Atividade Prática 1 
+
+----------- PARTE 2 ----------- 
+
+Fazer uma navegação entre as seguintes páginas, com os seguintes nomes : 
+
+HOME - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+
+SOBRE NÓS - [AQUI VAI UM LINK PARA A PÁGINA "about.html"]
+
+PROGRAMAS DE FORMAÇÃO - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/programs"]
+
+PARA EMPRESAS - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/for-companies"]
+
+CONTATOS - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/contact"]
+
+
+----------- PARTE 3 ----------- 
+
+Crie uma sessão, cujo o título principal seja Sobre. 
+
+Dentro de Minha Sessão , coloque um texto alternativo em um parágrafo .
+
+
+Após esse processo, coloque uma linha horizontal 
+
+
+----------- PARTE 4 ----------- 
+
+Crie uma sessão, cujo o título principal seja Lista de Programas Sobre 
+
+Dentro de Lista de Programas Sobre , coloque um texto alternativo em um parágrafo .
+
+
+Após esse processo, coloque uma linha horizontal 
+
+----------- PARTE 5 -----------
+
+Abaixo da linha horizontal do Lista de Programas Sobre  , crie um rodapé contendo as seguintes informações : 
+
+- Termos de Uso - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+- Políticas de Privacidade - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+
+- Escreva o seguinte texto :  © Copyright 202X by Growdev ® Register

@@ -1,0 +1,70 @@
+----------- PARTE 1 ----------- 
+
+Título da página: Atividade Prática 1 
+
+----------- PARTE 2 ----------- 
+
+Fazer uma navegação entre as seguintes páginas, com os seguintes nomes : 
+
+HOME - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+
+SOBRE NÓS - [AQUI VAI UM LINK PARA A PÁGINA "about.html"]
+
+PROGRAMAS DE FORMAÇÃO - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/programs"]
+
+PARA EMPRESAS - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/for-companies"]
+
+CONTATOS - [AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/contact"]
+
+
+----------- PARTE 3 ----------- 
+
+Insira a imagem do logo da Growdev, que está dentro da página images 
+
+----------- PARTE 4 ----------- 
+
+Crie 6 títulos (com pesos diferentes) com as seguintes descrições : 
+
+Titulo 1 - Aqui é um título 1
+Titulo 2 - Aqui é um título 2
+Titulo 3 - Aqui é um título 3
+Titulo 4 - Aqui é um título 4
+Titulo 5 - Aqui é um título 5
+Titulo 6 - Aqui é um título 6
+
+
+----------- PARTE 5 ----------- 
+
+Crie uma sessão, cujo o título principal seja Minha Sessão. 
+
+Dentro de Minha Sessão , coloque um texto alternativo em um parágrafo .
+
+
+Após esse processo, coloque uma linha horizontal 
+
+
+----------- PARTE 6 ----------- 
+
+Abaixo da linha horizontal do Minha  Sessão, escreva o Meu Artigo 
+
+Dentro de Minha Sessão , coloque um texto alternativo em um parágrafo 
+
+Após esse processo, coloque uma linha horizontal
+
+----------- PARTE 8 ----------- 
+
+Abaixo da linha horizontal do Meu Artigo, escreva o Minha Lista 
+
+Dentro de Minha Lista , coloque uma lista com 3 itens relacionados a growdev
+
+Após esse processo, coloque uma linha horizontal
+
+
+----------- PARTE 8 -----------
+
+Abaixo da linha horizontal do Minha Lista , crie um rodapé contendo as seguintes informações : 
+
+- Termos de Uso - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+- Políticas de Privacidade - [AQUI VAI UM LINK PARA A PÁGINA "home.html"]
+
+- Escreva o seguinte texto :  © Copyright 202X by Growdev ® Register
