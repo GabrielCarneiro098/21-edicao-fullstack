@@ -1,0 +1,74 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+pre {
+  color: red;
+}
+
+body {
+  background-color: rgb(77, 211, 238);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 20px;
+  color: orange;
+}
+
+strong {
+  color: chartreuse;
+}
+
+mark {
+  background-color: aliceblue;
+}
+
+a {
+  color: rgb(226, 43, 43);
+  text-decoration: none;
+}
+
+table {
+  height: 30vh;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+  border: 1px solid;
+}
+
+.descricao {
+  background-color: brown;
+  border: 1px solid chocolate;
+  border-bottom: black;
+}
+
+ol {
+  list-style: upper-alpha;
+}
+
+ul {
+  list-style: square;
+}
+
+.par {
+  color: blue;
+  background-color: green;
+}
+
+iframe {
+  height: 30vh;
+  width: 30vw;
+}
+
+iframe {
+  width: 25vw;
+  height: 25vw;
+  border: none;
+}
