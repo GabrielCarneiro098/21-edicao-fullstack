@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+}
+
+/* PÁGINA SOBRE */
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(48, 69, 96);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 0 20px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+nav img {
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+  width: 150px;
+  border: 6px solid rgb(71, 95, 126);
+}
+
+nav a {
+  color: #ffff;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  opacity: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+  flex-direction: column;
+}
+
+main h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main h4 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+main p {
+  margin: 100px 0;
+  font-weight: bold;
+}
+
+main div {
+  display: flex;
+  gap: 30px;
+}
+
+i {
+  font-size: 50px;
+  color: rgb(80, 80, 80);
+  transition: 0.5s;
+}
+
+i:hover {
+  opacity: 0.5;
+}
+
+main span {
+  color: rgb(39, 86, 148);
+  transition: 0.5s;
+}
+
+main h4 span:hover {
+  opacity: 0.5;
+}
+
+/* CONHECIMENTOS */
+
+main ol,
+main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#conhecimentos li {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#conhecimentos li:hover {
+  color: rgb(56, 109, 179);
+  cursor: pointer;
+}
+
+/* OBJETIVOS */
+
+#objetivos h2 {
+  padding: 30px 0 0 50px;
+}
+
+#objetivos ul {
+  padding: 20px 0 0 90px;
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  nav,
+  nav div {
+    padding: 0;
+    width: 100vw;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  nav {
+    padding: 0 30px;
+  }
+
+  nav img {
+    height: 75px;
+    width: 75px;
+    border: 3px solid rgb(71, 95, 126);
+  }
+
+  main {
+    height: 100vh;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  nav h3 {
+    font-size: 0.7rem;
+  }
+
+  #sobre h1 {
+    font-size: 1.2em;
+  }
+  #sobre h4,
+  #sobre p {
+    font-size: 0.6em;
+  }
+
+  #conhecimentos li {
+    font-size: 1.5em;
+  }
+
+  #objetivos h1,
+  #objetivos h2,
+  #objetivos li {
+    font-size: 0.8em;
+  }
+
+  #objetivos ul {
+    gap: 15px;
+  }
+}
