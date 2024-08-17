@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 10</title>
+  </head>
+  <body>
+    <script>
+      var data_atual = new Date();
+      var ano_atual = data_atual.getFullYear();
+
+      var nome = prompt(`Digite seu nome.`);
+      var idade = prompt(`Digite seu idade.`);
+
+      alert(
+        `Nome: ${nome}, Idade: ${idade} anos, nasceu em ${ano_atual - idade}`
+      );
+    </script>
+  </body>
+</html>

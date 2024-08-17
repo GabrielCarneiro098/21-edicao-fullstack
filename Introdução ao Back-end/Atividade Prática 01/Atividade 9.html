@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 9</title>
+  </head>
+  <body>
+    <script>
+      var maça = 0.3;
+      var maça_promo = 0.25;
+
+      var quantidade = prompt(`Quantas maças deseja levar?`);
+
+      if (quantidade >= 12) {
+        alert(
+          `${quantidade} maças, total: R$${(quantidade * maça_promo).toFixed(
+            2
+          )}`
+        );
+      } else {
+        alert(
+          `${quantidade} maças, total: R$${(quantidade * maça).toFixed(2)}`
+        );
+      }
+    </script>
+  </body>
+</html>

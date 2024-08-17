@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 12</title>
+  </head>
+  <body>
+    <script>
+      var data_atual = new Date();
+      var ano_atual = data_atual.getFullYear();
+
+      var ano_de_nascimento = prompt(`Digite seu ano de nascimento.`);
+
+      if (ano_atual - ano_de_nascimento >= 18) {
+        alert(`Pegue seu titulo e venha votar!`);
+      } else {
+        alert(`Você não tem idade suficiente pra votar ainda...`);
+      }
+    </script>
+  </body>
+</html>

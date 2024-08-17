@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 7</title>
+  </head>
+  <body>
+    <script>
+      function calcularPercentuais() {
+        const totalEleitores = parseInt(
+          prompt("Digite o número total de eleitores:")
+        );
+        const votosBrancos = parseInt(
+          prompt("Digite o número de votos brancos:")
+        );
+        const votosNulos = parseInt(prompt("Digite o número de votos nulos:"));
+        const votosValidos = parseInt(
+          prompt("Digite o número de votos válidos:")
+        );
+
+        if (totalEleitores <= 0) {
+          console.log("O número total de eleitores deve ser maior que zero.");
+          return;
+        }
+
+        const percentualBrancos = (votosBrancos / totalEleitores) * 100;
+        const percentualNulos = (votosNulos / totalEleitores) * 100;
+        const percentualValidos = (votosValidos / totalEleitores) * 100;
+
+        console.log(
+          `Percentual de votos brancos: ${percentualBrancos.toFixed(2)}%`
+        );
+        console.log(
+          `Percentual de votos nulos: ${percentualNulos.toFixed(2)}%`
+        );
+        console.log(
+          `Percentual de votos válidos: ${percentualValidos.toFixed(2)}%`
+        );
+      }
+
+      calcularPercentuais();
+    </script>
+  </body>
+</html>
