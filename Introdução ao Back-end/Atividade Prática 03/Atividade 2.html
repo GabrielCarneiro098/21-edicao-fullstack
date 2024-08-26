@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <script>
+        var pedro = 1.50
+        var lucas = 1.10
+        index = 0
+
+        while(lucas < pedro) {
+            pedro += 0.02
+            lucas += 0.03
+            index ++
+
+            console.log(pedro.toFixed(2), lucas.toFixed(2))
+            document.write(`${index}° ano. Altura de Pedro: ${pedro.toFixed(2)}m, altura de Lucas: ${lucas.toFixed(2)}m <br><br>`)
+        }
+        document.write(`São necessários ${index - 1} para que Lucas e Pedro tenham a mesma altura. <br>`)
+        document.write(`São necessário ${index} anos para que Lucas seja maior que Pedro. <br><br> ESTÃO ALTOS ATÉ DEMAIS!!! É o Manute Bol???`)
+    </script>
+</body>
+</html>

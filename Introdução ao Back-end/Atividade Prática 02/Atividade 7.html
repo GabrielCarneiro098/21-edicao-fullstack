@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var saldo = 1000;
+      var saque = parseFloat(prompt("Quanto deseja sacar?"));
+
+      // Verifica se o valor do saque é válido
+      if (saque % 5 !== 0) {
+        console.log("O valor do saque deve ser múltiplo de 5.");
+      } else if (saque > saldo) {
+        console.log("Você não tem saldo suficiente para realizar o saque.");
+      } else {
+        // Calcula o novo saldo após o saque e a taxa
+        var novoSaldo = saldo - saque - 4.5;
+
+        // Exibe o novo saldo
+        console.log(
+          "Saque realizado com sucesso. Novo saldo: R$" + novoSaldo.toFixed(2)
+        );
+      }
+    </script>
+  </body>
+</html>

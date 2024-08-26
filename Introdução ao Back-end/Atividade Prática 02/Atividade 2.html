@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var diaDaSemana = parseInt(prompt("Digite um número de 1 a 7"));
+
+      switch (diaDaSemana) {
+        case 1:
+          document.write("domingo");
+          break;
+        case 2:
+          document.write("Segunda");
+          break;
+        case 3:
+          document.write("Terça");
+          break;
+        case 4:
+          document.write("Quarta");
+          break;
+        case 5:
+          document.write("Quinta");
+          break;
+        case 6:
+          document.write("Sexta");
+          break;
+        case 7:
+          document.write("Sábado");
+          break;
+      }
+
+      if (diaDaSemana >= 8) {
+        alert("Dia da semana incorreto!");
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

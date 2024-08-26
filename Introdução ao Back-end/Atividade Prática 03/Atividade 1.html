@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <script>
+        var index = 1
+        var alturaMenor = 10
+        var alturaMaior = 0
+
+        while ( index <= 15) {
+            var altura = prompt("Digite sua altura" + index)
+            index ++
+
+            if (altura > alturaMaior) {
+                alturaMaior = altura
+            } else if (altura < alturaMenor) {
+                alturaMenor = altura
+            }
+        }
+
+        console.log("A menor altura do grupo é: " + alturaMenor)
+        console.log("A maior altura do grupo é: " + alturaMaior)
+
+
+    </script>
+</body>
+</html>

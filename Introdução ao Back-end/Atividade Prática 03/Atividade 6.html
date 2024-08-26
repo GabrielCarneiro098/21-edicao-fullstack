@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <script>
+        for (let index = 30; index >= 1; index--) {
+      let numeroPrimo = true;
+
+      for (let i = 2; i < index; i++) {
+        if (index % i === 0) {
+          numeroPrimo = false;
+          break;
+        }
+      }
+      if (numeroPrimo) {
+        document.write(`[${index}] `);
+      } else {
+        document.write(`${index} `);
+      }
+    }
+    </script>
+</body>
+</html>

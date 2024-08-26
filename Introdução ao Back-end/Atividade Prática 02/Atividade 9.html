@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var velocidade = parseFloat(prompt("velocidade do carro?"));
+
+      if (velocidade > 80) {
+        console.log("Você foi multado");
+        var taxa = 5;
+        var multa = velocidade - 80;
+        var cobrança = multa * taxa;
+
+        document.write("Você foi multado em R$" + cobrança.toFixed(2));
+      } else {
+        document.write("Velocidade ok");
+      }
+    </script>
+  </body>
+</html>

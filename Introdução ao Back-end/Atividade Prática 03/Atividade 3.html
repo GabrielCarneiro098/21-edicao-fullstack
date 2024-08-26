@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Vamos fazer uma tabuada! Digite um número: "))
+        var i = parseInt(prompt("Quantas vezes você quer multiplicar esse número?"))
+        index = 0
+        
+        while(index != i) {
+            document.write(`${index} * ${n} = ${index*n} <br>`)
+            index ++
+            console.log(index)
+            if (index === i) {
+                document.write(`${index} * ${n} = ${index*n} <br>`)
+            }
+        }
+
+    </script>
+</body>
+</html>

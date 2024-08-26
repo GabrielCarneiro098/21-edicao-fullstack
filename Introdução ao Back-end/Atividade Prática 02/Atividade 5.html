@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var altura = parseFloat(prompt("Digite sua altura"));
+      var peso = parseFloat(prompt("Digite seu peso"));
+      var imc = peso / altura ** 2;
+
+      if (imc < 18.5) {
+        document.write("Você está abaixo da faixa de peso ideal");
+      } else if (imc > 24.99) {
+        document.write("Você está acima da faixa de peso ideal");
+      } else if (imc >= 18.5 && imc <= 24.99) {
+        document.write("Você está dentro da faixa de peso ideal");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <script>
+
+var soma = 0;
+var numerosPositivos = 0;
+var numerosNegativos = 0;
+
+for (var i = 1; i <= 10; i++) {
+  var numero = parseFloat(prompt("Digite o número " + i + ":"));
+  soma += numero;
+  
+  if (numero > 0) {
+    numerosPositivos++;
+  } else if (numero < 0) {
+    numerosNegativos++;
+  }
+}
+
+var media = soma / 10;
+var percentualPositivos = (numerosPositivos / 10) * 100;
+var percentualNegativos = (numerosNegativos / 10) * 100;
+
+// Exibição dos resultados
+document.write("Média aritmética: " + media.toFixed(2) + "<br>");
+document.write("Quantidade de valores positivos: " + numerosPositivos + "<br>");
+document.write("Quantidade de valores negativos: " + numerosNegativos + "<br>");
+document.write("Percentual de valores positivos: " + percentualPositivos.toFixed(2) + "%" + "<br>");
+document.write("Percentual de valores negativos: " + percentualNegativos.toFixed(2) + "%" + "<br>");
+
+
+    </script>
+</body>
+</html>
