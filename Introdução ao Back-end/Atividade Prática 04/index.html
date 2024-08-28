@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nota1 = 0;
+      let nota5 = 0;
+      let nota10 = 0;
+      let nota50 = 0;
+
+      let saque = Number(prompt("Digite quanto deseja sacar."));
+      let valorInicial = saque;
+
+      while (saque != 0) {
+        if (saque >= 50.0) {
+          nota50++;
+          saque = saque - 50;
+        } else if (saque >= 10.0) {
+          nota10++;
+          saque = saque - 10;
+        } else if (saque >= 5) {
+          nota5++;
+          saque = saque - 5;
+        } else {
+          nota1++;
+          saque = saque - 1;
+        }
+      }
+
+      document.write(
+        "O saque solicitado foi de: GC$" +
+          valorInicial.toFixed(2) +
+          "<br>" +
+          " estamos imprimindo " +
+          nota50 +
+          " notas de GC$50" +
+          "<br>" +
+          nota10 +
+          " notas de GC$10 " +
+          "<br>" +
+          nota5 +
+          " notas de GC$5 " +
+          "<br>" +
+          nota1 +
+          " notas de GC$1"
+      );
+    </script>
+  </body>
+</html>

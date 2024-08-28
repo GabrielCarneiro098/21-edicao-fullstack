@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 5</title>
+  </head>
+  <body>
+    <script>
+      var distancia = parseInt(prompt("Quantos km tem até o seu destino?"));
+      var valor;
+      var valorFinal;
+
+      if (distancia < 200) {
+        valor = 0.5;
+        valorFinal = distancia * valor;
+      } else {
+        valor = 0.45;
+        valorFinal = distancia * valor;
+      }
+
+      document.write(
+        `Até o seu destino são ${distancia}KM o valor da passagem é R$${valorFinal.toFixed(
+          2
+        )}`
+      );
+    </script>
+  </body>
+</html>

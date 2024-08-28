@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 6</title>
+  </head>
+  <body>
+    <script>
+      var largura = prompt("Digite a largura: ");
+      var comprimento = prompt("Digite a comprimento: ");
+      var area = largura * comprimento;
+      var terreno;
+
+      if (area < 100) {
+        terreno = "TERRENO POPULAR";
+        document.write(
+          `A área do seu terreno mede ${area}m². E o seu terreno é classificado como: ${terreno}`
+        );
+      } else if (area >= 100 && area <= 500) {
+        terreno = "TERRENO MASTER";
+        document.write(
+          `A área do seu terreno mede ${area}m². E o seu terreno é classificado como: ${terreno}`
+        );
+      } else {
+        terreno = "TERRENO VIP";
+        document.write(
+          `A área do seu terreno mede ${area}m². E o seu terreno é classificado como: ${terreno}`
+        );
+      }
+    </script>
+  </body>
+</html>

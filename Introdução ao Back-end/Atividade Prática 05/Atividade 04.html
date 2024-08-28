@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 4</title>
+  </head>
+  <body>
+    <script>
+      var desconto = 0;
+      var nome = prompt("Digite seu nome: ");
+      var sexo = prompt("homem ou mulher? ");
+      var compras = parseFloat(prompt("Quanto deseja gastar? "));
+      var valorFinal = 0.0;
+
+      if (sexo == "mulher") {
+        desconto = 0.13;
+        valorFinal = compras - compras * desconto;
+      } else {
+        desconto = 0.05;
+        valorFinal = compras - compras * desconto;
+      }
+
+      document.write(
+        `${nome}, o valor das suas compras foram R$${compras.toFixed(
+          2
+        )} você tem desconto de ${
+          desconto * 100
+        }% e o valor final da compra saiu por R$${valorFinal.toFixed(2)}`
+      );
+    </script>
+  </body>
+</html>

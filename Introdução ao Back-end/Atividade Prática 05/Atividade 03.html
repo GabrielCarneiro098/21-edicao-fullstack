@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3</title>
+  </head>
+  <body>
+    <script>
+      var primeiroValor = parseInt(prompt("Digite o primeiro valor: "));
+      var ultimoValor = parseInt(prompt("Digite o último valor: "));
+      var incremento = parseInt(prompt("Digite o incremento: "));
+      var valorAtual = primeiroValor;
+      document.write("Contagem: " + valorAtual + " ");
+
+      while (valorAtual < ultimoValor) {
+        valorAtual += incremento;
+        if (valorAtual < ultimoValor) {
+          document.write(valorAtual + " ");
+        } else {
+          document.write("acabou!");
+        }
+      }
+    </script>
+  </body>
+</html>
