@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Exercícios extra
+      Exercício 1: Soma de números pares
+
+      Crie um array chamado numeros contendo 10 números inteiros de sua escolha.
+      Escreva um programa que percorra o array e some apenas os números pares.
+      Exiba o resultado da soma no console.
+
+      Exercício 2: Maior valor no array
+
+      Crie um array chamado valores contendo 8 números inteiros de sua escolha.
+      Escreva um programa que encontre o maior valor no array.
+      Exiba o maior valor no console.
+
+      Exercício 3: Buscar aluno
+
+      Crie um array chamado alunos contendo nomes de 10 alunos.
+      Escreva um programa que solicita ao usuário um nome de aluno e verifica se esse nome está no array.
+      Exiba uma mensagem no console informando se o aluno foi encontrado ou não.
+
+      Exercício 4: Média de Notas: Crie um programa que permita ao usuário inserir as notas de alunos (de 0 a 10) em uma disciplina. O programa deve continuar pedindo as notas até que o usuário indique que não deseja mais inserir notas. Em seguida, o programa deve calcular a média das notas e informar se o aluno foi aprovado (média maior ou igual a 7) ou reprovado.     */
+
+      const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var soma = 0;
+
+      for (let index = 0; index < numeros.length; index++) {
+        if (numeros[index] % 2 == 0) {
+          console.log(soma);
+          soma += numeros[index];
+        }
+      }
+      console.log(soma);
+
+      //Exercicio 2
+      const oito_numeros = [2, 6, 10, 26, 56, 43, 21, 9];
+
+      let maiorNumero = 0;
+
+      for (let index = 0; index < oito_numeros.length; index++) {
+        if (oito_numeros[index] > maiorNumero) {
+          maiorNumero = oito_numeros[index];
+        }
+      }
+
+      console.log(maiorNumero);
+
+      //Exercicio 3
+      //   const alunos = [
+      //     "Gabriel",
+      //     "Pedro",
+      //     "Eduardo",
+      //     "Lucas",
+      //     "Matheus",
+      //     "Daniel",
+      //     "Jorge",
+      //     "Miguel",
+      //     "Carol",
+      //     "Douglas",
+      //   ];
+
+      //   var nome = prompt("Digite um nome.");
+      //   var alunoPresente;
+      //   for (const element of alunos) {
+      //     if (nome === element) {
+      //       alunoPresente = element;
+      //     }
+      //   }
+
+      //   if (alunoPresente) {
+      //     console.log(alunoPresente);
+      //   } else {
+      //     console.log("Não existe nenhum aluno com esse nome.");
+      //   }
+
+      //Exercicio 4
+      const notas = [];
+      var inserir = true;
+
+      while (inserir) {
+        let nota = Number(prompt("Digite sua nota"));
+        notas.push(nota);
+        console.log(notas);
+        var desejaContinuar = prompt("Deseja continuar? (S/N)");
+        if (desejaContinuar == "N") {
+          inserir = false;
+        }
+      }
+
+      var total = 0;
+      for (const element of notas) {
+        total += element;
+      }
+
+      var media = total / notas.length;
+      if (media >= 7) {
+        console.log(`Aluno aprovado com média ${media}`);
+      } else {
+        console.log(`Aluno reprovado com média ${media}`);
+      }
+    </script>
+  </body>
+</html>
