@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15</title>
+</head>
+<body>
+    <script>
+
+        var A = parseInt(prompt("Digite a medida do lado A do triangulo:")) 
+        var B = parseInt(prompt("Digite a medida do lado B do triangulo:")) 
+        var C = parseInt(prompt("Digite a medida do lado C do triangulo:")) 
+
+        if (A<B+C && B<A+C && C<A+B) {
+            if(A == B && B==C) {
+                document.write("As medidas formam um triângulo equilátero")
+            } else if (A!==B && B!==C && A!==C) {
+                document.write("As medidas formam um triângulo escaleno")
+            } else if (A==B || A==C || B==C) {
+                document.write("As medidas formam um triângulo isósceles")
+            }
+        } else {
+            document.write("Você forneceu as medidas erradas, essas medidas não podem formar um triângulo. Recarregue a página.")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <script>
+        alert("Vamos medir seu peso ideal!")
+        var altura = parseFloat(prompt("Digite sua altura: "))
+        var sexo = parseInt(prompt("Você é homem ou mulher? Digite 1 para mulher ou 2 para homem. "))
+
+        if (sexo == 1) {
+            document.write(`Seu peso ideal é ${((72.7 * altura) - 58).toFixed(2)}Kg`)
+        } else if (sexo == 2) {
+            document.write(`Seu peso ideal é ${((62.1 * altura) - 44.7).toFixed(2)}Kg`)
+        } else {
+           document.write("Opção invalida, recarregue a página.")
+        }
+    </script>
+</body>
+</html>
