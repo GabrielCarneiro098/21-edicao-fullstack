@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ativiade Prática 10</title>
+  </head>
+  <body>
+    <script>
+      //Atividade 1
+      function calcularMedia(notas, letra) {
+        let media = 0;
+
+        if (letra === "A") {
+          media = (notas[0] + notas[1] + notas[2]) / 3;
+        } else if (letra === "P") {
+          media = (notas[0] * 5 + notas[1] * 3 + notas[2] * 2) / 10;
+        } else {
+          return "Letra invalida!";
+        }
+
+        return media;
+      }
+
+      let notasDoAluno = [8, 3, 9];
+      var letra = "A";
+      const mediaCalculada = calcularMedia(notasDoAluno, letra);
+      console.log("media do aluno", mediaCalculada);
+
+      //Atividade 2
+      function imparidade(numero) {
+        return Boolean(numero % 2);
+      }
+
+      console.log("3 é impar: " + imparidade(3));
+      console.log("4 é impar: " + imparidade(4));
+
+      //Atividade 3
+      function numeroPrimo(numero) {
+        if (numero <= 1) {
+          return false;
+        }
+        for (let index = 2; index < numero; index++) {
+          if (numero % index === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      console.log(numeroPrimo(7));
+      console.log(numeroPrimo(1));
+      console.log(numeroPrimo(10));
+
+      //Atividade 4
+      function relogio(tempoEmSegundos) {
+        const event = new Date(tempoEmSegundos);
+
+        let horas;
+        let minutos;
+        let segundos;
+
+        horas = Math.floor(tempoEmSegundos / 3600);
+        tempoEmSegundos -= horas * 3600;
+
+        minutos = Math.floor(tempoEmSegundos / 60);
+        tempoEmSegundos -= minutos * 60;
+
+        segundos = tempoEmSegundos;
+
+        return { horas, minutos, segundos };
+      }
+
+      console.log(relogio(3958));
+
+      //Atividade 5
+      function perfeito(numero) {
+        if (numero <= 1) {
+          return false;
+        }
+
+        let soma = 0;
+
+        for (let index = 1; index < numero; index++) {
+          if (numero % index === 0) {
+            soma += index;
+          }
+        }
+
+        return numero === soma;
+      }
+
+      console.log(perfeito(6));
+      console.log(perfeito(8));
+      console.log(perfeito(28));
+      console.log(perfeito(496));
+      console.log(perfeito(500));
+      console.log(perfeito(8128));
+
+      //Atividade 6
+      function acessoAoSite() {
+        alert("Bem vindo ao site");
+      }
+
+      acessoAoSite();
+
+      //Atividade 7
+      function mostrarMensagem() {
+        let nomeDaAplicacao = "growdev";
+        console.log("Acesso á aplicação " + nomeDaAplicacao);
+        alert("Bem vindo à aplicação " + nomeDaAplicacao);
+      }
+
+      mostrarMensagem();
+
+      //Atividade 8
+      function mostrarDobro(num) {
+        alert(`O dobro do número ${num} é ${num * 2}`);
+      }
+
+      mostrarDobro(10);
+
+      //Atividade 9
+      function calcularMedia(nota1, nota2, nota3, nome) {
+        let media = (nota1 + nota2 + nota3) / 3;
+        alert(`${nome}, sua média é ${media.toFixed(2)}`);
+        console.log(`Nota1: ${nota1}, Nota2: ${nota2}, Nota3: ${nota3}`);
+      }
+
+      calcularMedia(3, 5, 8, "Gabriel");
+    </script>
+  </body>
+</html>
