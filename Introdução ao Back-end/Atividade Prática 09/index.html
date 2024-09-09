@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Prática 09</title>
+  </head>
+  <body>
+    <script>
+      //Atividade 1
+      const produto = {
+        preço: 90.0,
+        descrição: "Notebook",
+      };
+      console.log(produto);
+      console.log(
+        `Produto: ${produto.descrição}, preço: R$${produto.preço.toFixed(2)}`
+      );
+
+      //Atividade 2
+      const produto1 = {
+        processador: "I7",
+        memoria: "16GB",
+        preço: 5000.0,
+        HD: "1TB",
+        SSD: "256GB",
+      };
+      console.log(produto1);
+
+      //Atividade 3
+      const aluno1 = {
+        nome: "Gabriel",
+        nota1: 10,
+        nota2: 8,
+      };
+
+      const aluno2 = {
+        nome: "Fulano",
+        nota1: 8,
+        nota2: 6,
+      };
+
+      let mediaAluno1 = (aluno1.nota1 + aluno1.nota2) / 2;
+      let mediaAluno2 = (aluno2.nota1 + aluno2.nota2) / 2;
+
+      let mediaTurma = (mediaAluno1 + mediaAluno2) / 2;
+      console.log(
+        aluno1,
+        aluno2,
+        `Media ${aluno1.nome}: ${mediaAluno1}. Média ${aluno2.nome}: ${mediaAluno2}. Média da turma: ${mediaTurma}`
+      );
+
+      //Atividade 4
+      const pessoas = [];
+
+      do {
+        const pessoa = {};
+        pessoa.nome = prompt("Informe o nome da pessoa.");
+        pessoa.idade = prompt("Informe a idade da pessoa.");
+        pessoa.trabalhando = confirm("Essa pessoa está trabalhando?");
+
+        if (pessoa.trabalhando) {
+          pessoa.salario = parseFloat(prompt("Informe o salário da pessoa."));
+        }
+
+        pessoas.push(pessoa);
+        var continuar = confirm("Deseja continuar?");
+      } while (continuar);
+
+      document.write("Pessoas desempregadas: <br><br>");
+      for (const pessoa of pessoas) {
+        if (!pessoa.trabalhando) {
+          document.write("Nome: ", pessoa.nome + "<br>");
+          document.write("Idade: ", pessoa.idade + "<br><br>");
+        }
+      }
+
+      document.write(
+        "Pessoas empregadas com salários menores que R$2500,00 <br><br>"
+      );
+      for (const pessoa of pessoas) {
+        if (pessoa.trabalhando && pessoa.salario < 2500) {
+          document.write("Nome: ", pessoa.nome + "<br>");
+          document.write("Idade: ", pessoa.idade + "<br>");
+          document.write("Salário: R$", pessoa.salario.toFixed(2) + "<br><br>");
+        }
+      }
+
+      document.write(
+        "Pessoas empregadas com salários menores que R$2500,00 <br><br>"
+      );
+      for (const pessoa of pessoas) {
+        if (pessoa.trabalhando && pessoa.salario > 2500) {
+          document.write("Nome: ", pessoa.nome + "<br>");
+          document.write("Idade: ", pessoa.idade + "<br>");
+          document.write("Salário: R$", pessoa.salario.toFixed(2) + "<br><br>");
+        }
+      }
+    </script>
+  </body>
+</html>
