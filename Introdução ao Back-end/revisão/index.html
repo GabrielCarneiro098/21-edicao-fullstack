@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revisão introdução Back-End</title>
+  </head>
+  <body>
+    <script>
+      //Atividade 1
+      const pizzaPequena = 20.0;
+      const pizzaMedia = 30.0;
+      const pizzaGrande = 40.0;
+
+      var pedido = prompt("Qual tamanho da pizza o senhor deseja?");
+      var refrigerante = confirm("Deseja adicionar refrigerante?");
+      var total = 0;
+
+      if (pedido == "pequena" && refrigerante == true) {
+        total = 25.0;
+        document.write(
+          `Aqui está sua pizza ${pedido} e seu refrigerante. Total: R$${total.toFixed(
+            2
+          )}`
+        );
+      } else if (pedido == "media") {
+        document.write(
+          `Aqui está sua pizza ${pedido}. Total: R$${pizzaMedia.toFixed(2)}`
+        );
+      } else if (pedido == "grande") {
+        document.write(
+          `Aqui está sua pizza ${pedido}. Total: R$${pizzaGrande.toFixed(2)}`
+        );
+      } else if (pedido == "pequena") {
+        document.write(
+          `Aqui está sua pizza ${pedido}. Total: R$${pizzaPequena.toFixed(2)}`
+        );
+      }
+
+      //Atividade 2
+
+      var id;
+      do {
+        id = parseInt(prompt("Digite ID do produto"));
+        if (isNaN(id)) {
+          alert("Identificador não encontrado, passe um número válido.");
+        }
+      } while (isNaN(id));
+
+      var nomeProduto = prompt("Digite nome do produto");
+      while (nomeProduto === "" || nomeProduto === null) {
+        nomeProduto = prompt("Insira um nome de produto válido");
+      }
+
+      var valorProduto;
+      do {
+        valorProduto = parseFloat(prompt("Digite valor do produto"));
+        if (isNaN(valorProduto)) {
+          alert("Preço inválido. Por favor, insira um número válido.");
+        }
+      } while (isNaN(valorProduto));
+
+      var estoque = parseInt(prompt("Informe quantidade em estoque"));
+      if (estoque <= 10 && estoque % 2 !== 0) {
+        estoque = prompt(
+          "Insira uma quantidade de produto válida para o estoque"
+        );
+      }
+
+      var estoque;
+
+      do {
+        estoque = parseInt(prompt("Informe quantidade em estoque"));
+
+        if (isNaN(estoque) || estoque <= 10 || estoque % 2 !== 0) {
+          alert(
+            "Insira uma quantidade de produto válida para o estoque. Deve ser um número maior que 10 e par."
+          );
+        }
+      } while (isNaN(estoque) || estoque <= 10 || estoque % 2 !== 0);
+
+      console.log(id, nomeProduto, valorProduto, estoque);
+
+      var dataCadastro = prompt(
+        "Desde quando você é nosso cliente? (Por exemplo: '2022-09-14')"
+      );
+
+      var dataAtual = new Date();
+      var dataCadastroCliente = new Date(dataCadastro);
+
+      var anosComoCliente =
+        dataAtual.getFullYear() - dataCadastroCliente.getFullYear();
+      var mesAtual = dataAtual.getMonth();
+      var mesCadastro = dataCadastroCliente.getMonth();
+
+      if (
+        mesAtual < mesCadastro ||
+        (mesAtual === mesCadastro &&
+          dataAtual.getDate() < dataCadastroCliente.getDate())
+      ) {
+        anosComoCliente--;
+      }
+
+      var desconto = 0;
+      if (anosComoCliente > 1) {
+        desconto = 0.1;
+        alert("Você tem 10% de desconto nos nossos produtos!");
+      }
+
+      while (true) {
+        var idProduto = prompt("Digite o ID do produto:");
+        var nomeProduto = prompt("Digite o nome do produto:");
+        var precoProduto = parseFloat(prompt("Digite o preço do produto:"));
+        var quantidadeEstoque = parseInt(
+          prompt("Digite a quantidade em estoque:")
+        );
+
+        if (desconto > 0) {
+          precoProduto -= precoProduto * desconto;
+        }
+
+        console.log(`ID: ${idProduto}`);
+        console.log(`Nome: ${nomeProduto}`);
+        console.log(`Preço com desconto: R$ ${precoProduto.toFixed(2)}`);
+        console.log(`Quantidade em estoque: ${quantidadeEstoque}`);
+
+        var continuar = prompt(
+          "Deseja continuar cadastrando produtos? (sim/não)"
+        );
+        if (continuar.toLowerCase() !== "sim") {
+          console.log("Você finalizou os cadastros.");
+          break;
+        }
+      }
+
+      var dataCadastro = prompt(
+        "Desde quando você é nosso cliente? (Por exemplo: '2022-09-14')"
+      );
+
+      var dataAtual = new Date();
+      var dataCadastroCliente = new Date(dataCadastro);
+
+      var anosComoCliente =
+        dataAtual.getFullYear() - dataCadastroCliente.getFullYear();
+      var mesAtual = dataAtual.getMonth();
+      var mesCadastro = dataCadastroCliente.getMonth();
+
+      if (
+        mesAtual < mesCadastro ||
+        (mesAtual === mesCadastro &&
+          dataAtual.getDate() < dataCadastroCliente.getDate())
+      ) {
+        anosComoCliente--;
+      }
+
+      var desconto = 0;
+      if (anosComoCliente > 3) {
+        desconto = 0.3; // 30% de desconto
+        alert("Você tem 30% de desconto nos nossos produtos!");
+      } else if (anosComoCliente > 2) {
+        desconto = 0.2; // 20% de desconto
+        alert("Você tem 20% de desconto nos nossos produtos!");
+      } else if (anosComoCliente > 1) {
+        desconto = 0.1; // 10% de desconto
+        alert("Você tem 10% de desconto nos nossos produtos!");
+      }
+
+      while (true) {
+        var idProduto = prompt("Digite o ID do produto:");
+        var nomeProduto = prompt("Digite o nome do produto:");
+        var precoProduto = parseFloat(prompt("Digite o preço do produto:"));
+        var quantidadeEstoque = parseInt(
+          prompt("Digite a quantidade em estoque:")
+        );
+
+        if (desconto > 0) {
+          precoProduto -= precoProduto * desconto;
+        }
+
+        console.log(`ID: ${idProduto}`);
+        console.log(`Nome: ${nomeProduto}`);
+        console.log(`Preço com desconto: R$ ${precoProduto.toFixed(2)}`);
+        console.log(`Quantidade em estoque: ${quantidadeEstoque}`);
+
+        var continuar = prompt(
+          "Deseja continuar cadastrando produtos? (sim/não)"
+        );
+        if (continuar.toLowerCase() !== "sim") {
+          console.log("Você finalizou os cadastros.");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
