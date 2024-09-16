@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Prática 11</title>
+  </head>
+  <body>
+    <script>
+      //Atividade 1
+      const salarios = [
+        5000.0, 5460.5, 3452.0, 6900.0, 7590.1, 8012.99, 1290.0, 15000.0,
+      ];
+
+      const indexSalarioMaior = salarios.findIndex(function (salario) {
+        return salario > 7500;
+      });
+
+      console.log(
+        "Primeiro salário maior que R$7500,00 é: R$" +
+          salarios[indexSalarioMaior].toFixed(2)
+      );
+
+      const salariosGrandes = salarios.filter(function (salario) {
+        return salario > 8000;
+      });
+
+      console.log(
+        "Os salários maiores que R$8000,00 são: R$" +
+          salariosGrandes.join(", R$")
+      );
+
+      //Atividade 2
+      const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];
+
+      console.log(rainbow);
+
+      rainbow.splice(2, 1);
+
+      console.log(rainbow);
+
+      rainbow.splice(1, 0, "Amarelo", "Verde");
+
+      console.log(rainbow);
+
+      rainbow.splice(3, 0, "Roxo");
+
+      console.log(rainbow);
+
+      //Atividade 3
+      const pessoas = [];
+
+      do {
+        const pessoa = {};
+        pessoa.nome = prompt("Informe o nome da pessoa.");
+        pessoa.idade = prompt("Informe a idade da pessoa.");
+        pessoa.trabalhando = confirm("Essa pessoa está trabalhando?");
+
+        if (pessoa.trabalhando) {
+          pessoa.salario = parseFloat(prompt("Informe o salário da pessoa."));
+        }
+
+        pessoas.push(pessoa);
+        var continuar = confirm("Deseja continuar?");
+      } while (continuar);
+
+      pessoas.filter(function (pessoa) {
+        if (!pessoa.trabalhando) {
+          document.write("Pessoas desempregadas: <br><br>");
+          document.write("Nome: " + pessoa.nome + "<br>");
+          document.write("Idade: " + pessoa.idade + "<br><br>");
+        } else if (pessoa.salario < 2500) {
+          document.write(
+            "Pessoas empregadas com salários menores que R$2500,00 <br><br>"
+          );
+
+          document.write("Nome: " + pessoa.nome + "<br>");
+          document.write("Idade: " + pessoa.idade + "<br>");
+          document.write(
+            "Salário: R$" + pessoa.salario.toFixed(2) + "<br><br>"
+          );
+        } else if (pessoa.salario > 2500) {
+          document.write(
+            "Pessoas empregadas com salários maiores que R$2500,00 <br><br>"
+          );
+
+          document.write("Nome: ", pessoa.nome + "<br>");
+          document.write("Idade: ", pessoa.idade + "<br>");
+          document.write("Salário: R$", pessoa.salario.toFixed(2) + "<br><br>");
+        }
+      });
+    </script>
+  </body>
+</html>

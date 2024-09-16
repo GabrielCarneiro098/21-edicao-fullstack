@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios</title>
+  </head>
+  <body>
+    <script>
+      //Atividade 1
+      console.log("Atividade 1");
+      const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+      for (const element of numeros) {
+        if (element % 2 === 0) {
+          console.log(element);
+        }
+      }
+
+      //Atividade 2
+      console.log("Atividade 2");
+      const numeros20 = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+      var soma = 0;
+      for (const element of numeros20) {
+        soma += element;
+        console.log(soma);
+      }
+
+      //Atividade 3
+      console.log("Atividade 3");
+      var count = 0;
+      var num = 1;
+      const numerosPerfeitos = [];
+
+      while (count < 4) {
+        soma = 0;
+        for (let i = 1; i < num; i++) {
+          if (num % i === 0) {
+            soma += i;
+          }
+        }
+
+        if (soma === num) {
+          numerosPerfeitos.push(num);
+          count++;
+        }
+
+        num++;
+      }
+
+      console.log(numerosPerfeitos);
+
+      //Atividade 4
+      console.log("Atividade 4");
+      const numeros10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var acertou = Boolean;
+      var userNumber = Number(
+        prompt("Adivinha o número que estou pensando agora")
+      );
+
+      for (const element of numeros10) {
+        if (userNumber === element) {
+          acertou = true;
+        }
+      }
+
+      if (acertou === true) {
+        console.log(`${userNumber}. Acertou!`);
+      } else {
+        console.log(`Errou! Tente novamente!`);
+      }
+
+      //Atividade 5
+      console.log("Atividade 5");
+
+      const nomes = [];
+      for (let i = 0; i < 5; i++) {
+        var nome = prompt("Digite um nome.");
+        nomes.push(nome);
+      }
+
+      console.log(nomes);
+
+      nomes.reverse();
+      console.log(nomes);
+    </script>
+  </body>
+</html>

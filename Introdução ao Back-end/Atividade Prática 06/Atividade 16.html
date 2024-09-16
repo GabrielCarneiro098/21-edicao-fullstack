@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 16</title>
+</head>
+<body>
+    <script>
+
+        var anoAtual = 2023
+        var dataNascimento = parseInt(prompt("Digite sua data de nascimento: "))
+        var idade = anoAtual - dataNascimento
+
+        if (idade < 18) {
+            document.write(`Você tem ${idade} anos, você ainda não tem permissão para votar, aguarde mais um pouco.`)
+        } else {
+            document.write(`Você tem ${idade} anos, você tem permissão para votar`)
+        }
+    </script>
+</body>
+</html>

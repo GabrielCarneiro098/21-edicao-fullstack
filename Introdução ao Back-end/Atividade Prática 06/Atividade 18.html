@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 18</title>
+</head>
+<body>
+    <script>
+        var preco = parseFloat(prompt("Digite o valor do produto: ")).toFixed(2)
+        var parcelas = parseInt(prompt("Deseja pagar em quantas parcelas? "))
+        var porcentagem = 0
+        var valorFinal = 0
+        if(parcelas == 1) {
+            porcentagem = 0.025
+            valorFinal = preco - (preco*porcentagem)
+           
+            document.write(`Valor do produto: R$${preco}.<br> Pagamento a vista. <br> Desconto: ${porcentagem*100}%<br> Valor final: R$${valorFinal.toFixed(2)}`)
+        } else if (parcelas >= 2 && parcelas <= 5) {
+            porcentagem = 0;
+            valorDaParcela = preco/parcelas;
+            valorFinal = valorDaParcela*parcelas;
+            
+            document.write(`Valor do produto: R$${preco}.<br> Parcelas: ${parcelas}x <br> Valor das parcelas: R$${valorDaParcela.toFixed(2)}<br> Desconto: ${porcentagem*100}%<br> Valor final: R$${valorFinal.toFixed(2)}`)
+        } else if (parcelas >= 6 && parcelas <= 10) {
+            porcentagem = 0.06
+            valorDaParcela = (preco/parcelas) +  (preco * porcentagem)
+            valorFinal = valorDaParcela * parcelas
+            
+            document.write(`Valor do produto: R$${preco}.<br> Parcelas: ${parcelas}x <br> Valor das parcelas: R$${valorDaParcela.toFixed(2)}<br> Juros: ${porcentagem*100}%<br> Valor final: R$${valorFinal.toFixed(2)}`)
+        } else if (parcelas >= 11 && parcelas <= 15) {
+            porcentagem = 0.13
+            valorDaParcela = (preco/parcelas) +  (preco * porcentagem)
+            valorFinal = valorDaParcela * parcelas
+            
+            document.write(`Valor do produto: R$${preco}.<br> Parcelas: ${parcelas}x <br> Valor das parcelas: R$${valorDaParcela.toFixed(2)}<br> Juros: ${porcentagem*100}%<br> Valor final: R$${valorFinal.toFixed(2)}`)
+        }
+    </script>
+</body>
+</html>

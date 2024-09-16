@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 17</title>
+</head>
+<body>
+    <script>
+        var eleitores = parseInt(prompt("Número total de eleitores:"))
+        var votosBrancos = parseInt(prompt("Número total de votos brancos:"))
+        var votosNulos = parseInt(prompt("Número total de votos nulos:"))
+        var votosValidos = parseInt(prompt("Número total de votos válidos:"))
+        
+        if ((votosBrancos+votosNulos+votosValidos) !== eleitores) {
+            document.write("Alguma informação está errada, o número de fotos não bate com o número de eleitores. <br> Recarregue a página.")
+        } else {
+            document.write(`Número total de eleitores: ${eleitores}<br>Porcentagem de votos brancos: ${(votosBrancos*100)/eleitores}%<br>Porcentagem de votos nulos: ${(votosNulos*100)/eleitores}%<br>Porcentagem de votos válidos: ${(votosValidos*100)/eleitores}%`)
+        } 
+
+
+
+    </script>
+</body>
+</html>
