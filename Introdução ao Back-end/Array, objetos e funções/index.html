@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const data = [
+        {
+          nome: "Roger Medeiros",
+          sexo: "M",
+          salario: 3250,
+        },
+        {
+          nome: "Carolina Silva",
+          sexo: "F",
+          salario: 1200,
+        },
+        {
+          nome: "Cristina Avila",
+          sexo: "F",
+          salario: 8100,
+        },
+        {
+          nome: "Gustavo Hoffman",
+          sexo: "M",
+          salario: 5200.35,
+        },
+        {
+          nome: "Eva Trindade",
+          sexo: "F",
+          salario: 2501,
+        },
+        {
+          nome: "Andre Mathias",
+          sexo: "M",
+          salario: 1750,
+        },
+        {
+          nome: "Joice Castro da Silva",
+
+          sexo: "F",
+          salario: 3350.25,
+        },
+      ];
+
+      console.log("Quantidade total de pessoas:", data.length);
+
+      const pessoasSexoFeminino = data.filter((pessoa) => pessoa.sexo === "F");
+      console.log(
+        "Quantidade total de pessoas do sexo Feminino:",
+        pessoasSexoFeminino.length
+      );
+
+      const salarioTotal = data.reduce(
+        (acumulo, pessoa) => acumulo + pessoa.salario,
+        0
+      );
+      console.log(
+        "Salario total dos funcionários: " + "R$" + salarioTotal.toFixed(2)
+      );
+
+      console.log(
+        `Média salárial dos funcionarios R$${(
+          salarioTotal / data.length
+        ).toFixed(2)}`
+      );
+
+      const pessoasSexoMasculino = data.filter((pessoa) => pessoa.sexo === "M");
+
+      const salarioTotalMasculino = data.reduce(
+        (acumulo, pessoa) => acumulo + pessoa.salario,
+        0
+      );
+
+      console.log(
+        `Média salárial dos funcionarios do sexo masculino R$${(
+          salarioTotalMasculino / pessoasSexoMasculino.length
+        ).toFixed(2)}`
+      );
+
+      console.log(data.some((pessoa) => pessoa.salario > 7000));
+
+      console.log(data.findIndex((pessoa) => pessoa.nome === "Eva Trindade"));
+
+      console.log(data.filter((pessoa) => pessoa.nome.includes("Silva")));
+
+      console.log(data.map((pessoa) => pessoa.nome));
+    </script>
+  </body>
+</html>
