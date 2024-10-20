@@ -4,10 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form
+    <form action="">
+      <h1>Formulário</h1>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div>
+          <label>Nome: </label>
+          <input type="text" required id="nome" />
+        </div>
+        <div>
+          <label>Endereço: </label>
+          <input type="text" required id="endereco" />
+        </div>
+        <div>
+          <label>Cidade: </label>
+          <input type="text" required id="cidade" />
+        </div>
+        <div>
+          <label>Estado: </label>
+          <select name="estado" id="estado">
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Bahia">Bahia</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Dados Profissionais</legend>
+        <h3>Natureza do Cargo</h3>
+        <div>
+          <input type="radio" value="Gerência" name="cargo" checked />
+          <label>Gerência </label>
+          <input type="radio" value="Financeiro" name="cargo" />
+          <label>Financeiro </label>
+          <input type="radio" value="Recepção" name="cargo" />
+          <label>Recepção </label>
+          <input type="radio" value="Administrativo" name="cargo" />
+          <label>Administrativo </label>
+          <input type="radio" value="Juridico" name="cargo" />
+          <label>Juridico </label>
+        </div>
+        <h4>Área de interesse</h4>
+        <div>
+          <input type="checkbox" value="Computação" name="interesse" />
+          <label>Computação </label>
+          <input type="checkbox" value="Biologia" name="interesse" />
+          <label>Biologia </label>
+          <input type="checkbox" value="Meio Ambiente" name="interesse" />
+          <label>Meio Ambiente </label>
+          <input type="checkbox" value="Engenharia" name="interesse" />
+          <label>Engenharia </label>
+          <input type="checkbox" value="História" name="interesse" />
+          <label>História </label>
+        </div>
+
+        <div>
+          <label for="">Mini-curriculo:</label>
+          <textarea name="" id="curriculo"></textarea>
+        </div>
+      </fieldset>
+      <div>
+        <button type="button" id="enviar">Enviar</button>
+        <button type="button" id="limpar">Limpar</button>
+      </div>
+    </form>
+    <!-- <form
       style="
         border: 1px solid;
         display: flex;
@@ -27,7 +92,7 @@
         placeholder="Descrição do recado"
       ></textarea>
       <button id="enviar" type="submit">Enviar recado</button>
-    </form>
+    </form> -->
     <script src="./script.js"></script>
   </body>
 </html>
