@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form
+      style="
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: 20vh;
+        padding: 20px;
+      "
+      action=""
+    >
+      <input id="email" placeholder="E-mail" type="email" />
+      <input id="title" placeholder="Titulo" type="text" />
+      <textarea
+        name="description"
+        id="description"
+        placeholder="Descrição do recado"
+      ></textarea>
+      <button id="enviar" type="submit">Enviar recado</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
