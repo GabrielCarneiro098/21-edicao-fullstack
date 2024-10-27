@@ -19,7 +19,16 @@
   </head>
   <body>
     <h1><i class="bi bi-envelope"></i> Meus recados</h1>
-    <form id="form">
+    <form id="form" class="shadow-lg">
+      <div>
+        <label for="" class="form-label">Nome: <br /></label>
+        <input
+          type="text"
+          id="nome"
+          placeholder="Insira seu nome"
+          class="form-control"
+        />
+      </div>
       <div>
         <label for="" class="form-label">Email: <br /></label>
         <input
@@ -40,11 +49,12 @@
         <p id="messageError" style="color: red; display: none"></p>
       </div>
       <div>
-        <button type="submit" id="login" class="btn btn-success">Logar</button>
+        <button type="submit" id="cadastrarBtn" class="btn btn-primary">
+          Cadastrar
+        </button>
       </div>
-      <p>Ainda não possui conta? <a href="./cadastro.html">Cadastre-se</a></p>
+      <p>Já possui conta? <a href="./index.html">Logar</a></p>
     </form>
-
-    <script src="./js/script.js"></script>
+    <script src="./js/cadastro.js"></script>
   </body>
 </html>
