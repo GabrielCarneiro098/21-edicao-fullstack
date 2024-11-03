@@ -17,7 +17,6 @@ function getRecados(currentPage) {
       )}?page=${currentPage}&perPage=5`
     )
     .then(function (response) {
-      console.log(response);
       const userMessages = response.data.notes;
       feed.innerHTML = "";
       if (userMessages.length == 0) {
@@ -105,4 +104,4 @@ function nextPage() {
 prevBtn.addEventListener("click", prevPage);
 nextBtn.addEventListener("click", nextPage);
 
-getRecados(1);
+getRecados(currentPage);
