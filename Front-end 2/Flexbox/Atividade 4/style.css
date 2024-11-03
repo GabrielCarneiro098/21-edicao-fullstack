@@ -12,6 +12,7 @@ body {
   margin-top: 12px;
 
   background-color: #fefefe;
+  animation: example 4s infinite;
 }
 
 #header {
@@ -29,8 +30,6 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 4px;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode play-state;
 }
 #header .profile-name {
   margin-left: 10px;
