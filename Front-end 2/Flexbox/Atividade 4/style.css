@@ -13,6 +13,8 @@ body {
 
   background-color: #fefefe;
   animation: example 4s infinite;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
 }
 
 #header {

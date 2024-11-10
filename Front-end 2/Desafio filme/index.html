@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Studio</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="./images/logo/iron_man_3_logo.png"
+        alt="Iron Man"
+        onclick="getMovie(this)"
+      />
+      <img
+        src="./images/logo/captain logo.webp"
+        alt="Captain America"
+        onclick="getMovie(this)"
+      />
+      <img
+        src="./images/logo/Thor logo.png"
+        alt="Thor"
+        onclick="getMovie(this)"
+      />
+    </header>
+
+    <main>
+      <div>
+        <img
+          id="superHero"
+          src="./images/Iron Man.png"
+          class="animate__animated animate__fadeInLeft"
+          alt=""
+        />
+      </div>
+      <section>
+        <h1 id="title">Title comes here</h1>
+        <p id="sinopse">
+          Tony Stark é um industrial bilionário e inventor brilhante que realiza
+          testes bélicos no exterior, mas é sequestrado por terroristas que o
+          forçam a construir uma arma devastadora. Em vez disso, ele constrói
+          uma armadura blindada e enfrenta seus sequestradores. Quando volta aos
+          Estados Unidos, Stark aprimora a armadura e a utiliza para combater o
+          crime.
+        </p>
+        <div class="blue"></div>
+        <button class="btn">Assistir trailer</button>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
