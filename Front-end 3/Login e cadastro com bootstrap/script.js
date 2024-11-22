@@ -19,15 +19,11 @@ function cadastro() {
     .then(function (response) {
       alert(`Conta criada com sucesso!`);
       window.location.href = "./login.html";
-      console.log(response);
     })
     .catch(function (error) {
-      console.log(error.response.data);
       response.innerText = error.response.data.error;
       requestMessage.style.display = "block";
     });
-
-  console.log(nome.value, email.value, senha.value);
 }
 
 cadastrar.addEventListener("click", cadastro);
