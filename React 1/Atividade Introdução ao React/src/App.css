@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}

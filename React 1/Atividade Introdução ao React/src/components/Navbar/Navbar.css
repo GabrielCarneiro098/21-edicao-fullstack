@@ -1,0 +1,15 @@
+.navlink {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav {
+  margin: 20px 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

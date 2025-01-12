@@ -1,0 +1,20 @@
+/* styles table bordered */
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-spacing: 2px;
+  border-color: grey;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
