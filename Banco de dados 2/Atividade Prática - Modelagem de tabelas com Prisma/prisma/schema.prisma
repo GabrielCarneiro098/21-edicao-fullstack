@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id       Int    @id @default(autoincrement()) @db.Integer
+  nome     String @db.VarChar(150)
+  idade    Int    @db.Integer
+  email    String @db.VarChar(200)
+  password String @db.Text
+  github   String @db.Text
+
+  @@map("usuarios")
+}
+
+model Produto {
+  id                Int      @id @default(autoincrement()) @db.Integer
+  descricao         String   @db.VarChar(500)
+  valor             Decimal  @db.Decimal(10, 2)
+  quantidadeEstoque Int      @db.Integer
+  tipoProduto       String   @db.VarChar(100)
+  disponivel        Boolean  @default(true) @db.Boolean
+  criadoEm          DateTime @default(now()) @map("criado_em")
+
+  @@map("produtos")
+}
+
+model Loja {
+  cnpj             Int      @id @default(autoincrement()) @db.Integer
+  nome             String   @db.VarChar(100)
+  segmento         String   @default("alimentação") @db.VarChar(100)
+  endereco         String   @db.VarChar(200)
+  telefone         String   @db.VarChar(12)
+  quantidadeFilias Int      @db.Integer
+  dataAbertura     DateTime @default(now()) @map("inaugurado_em") @db.Date
+
+  @@map("lojas")
+}
+
+model Fornecedor {
+  id        Int    @id @default(autoincrement()) @db.Integer
+  nome      String @db.VarChar(150)
+  email     String @db.VarChar(200)
+  avaliacao Int    @db.Integer
+  password  String @db.Text
+
+  dataCriacao     DateTime @default(now()) @map("criado_em") @db.Date
+  dataAtualizacao DateTime @default(now()) @map("atualizado_em") @db.Date
+
+  @@map("fornecedores")
+}
+
+// model Turma {
+//   id          Int      @id @default(autoincrement()) @db.Integer
+//   nome        String   @db.VarChar(200)
+//   dataInicio  DateTime @map("data_inicio") @db.Date
+//   dataTermino DateTime @map("data_termino") @db.Date
+
+//   matriculas Matricula[]
+
+//   @@map("turmas")
+// }
+
+// model Matricula {
+//   id            Int           @id @default(autoincrement()) @db.Integer
+//   idTurma       Int           @map("id_turma") @db.Integer
+//   idAluno       Int           @map("id_aluno") @db.Integer
+//   dataMatricula DateTime      @map("data_matricula") @db.Date
+//   situacao      SituacaoAluno @default(pendente)
+
+//   aluno Aluno @relation(fields: [idAluno], references: [id])
+//   turma Turma @relation(fields: [idTurma], references: [id])
+
+//   @@map("matricula")
+// }
+
+// enum SituacaoAluno {
+//   pendente
+//   regular
+//   bloqueado
+// }
